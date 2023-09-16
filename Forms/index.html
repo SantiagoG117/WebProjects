@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms fundamentals</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/WebProjects/Forms/Styles/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
@@ -12,23 +12,15 @@
   </head>
   <body>
     <!-- 
-        * action: Used to submit the form
+        * action: Where we need to save the data. A relative or absolute URL
      -->
-    <form>
+    <form action="https://formspree.io/f/xaygbbln" method="POST">
       <!-- Input fields or form controls -->
-
-      <div class="form-group">
-        <!-- * for allows us to associate a label with an input field -->
-        <label for="name">Name</label>
-        <input id="name" type="text" />
-      </div>
-      <div class="form-group">
-        <!-- *type="email" provides basic validation on the field -->
-        <label for="email">Email</label>
-        <input id="email" type="email" />
-      </div>
-      <button type="submit">Register</button>
-      <button type="reset">Clear</button>
+      <input type="text" placeholder="Name" name="name" autofocus />
+      <input type="text" placeholder="Email" name="email" />
+      <textarea name="textarea" placeholder="Message..."></textarea>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
     </form>
   </body>
 </html>
